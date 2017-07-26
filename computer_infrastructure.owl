@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY computer_infrastructure "http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure#"
+     xml:base="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:computer_infrastructure="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/datatypes/Gb -->
+
+    <rdfs:Datatype rdf:about="&computer_infrastructure;datatypes/Gb">
+        <rdfs:comment>Gb/s</rdfs:comment>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/datatypes/Hz -->
+
+    <rdfs:Datatype rdf:about="&computer_infrastructure;datatypes/Hz"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/datatypes/Mb -->
+
+    <rdfs:Datatype rdf:about="&computer_infrastructure;datatypes/Mb">
+        <rdfs:comment>Mb/s</rdfs:comment>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/belongsTo -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;belongsTo">
+        <owl:inverseOf rdf:resource="&computer_infrastructure;hasPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/connects -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;connects">
+        <rdfs:domain rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:range rdf:resource="&computer_infrastructure;Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasCPU -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;hasCPU">
+        <rdfs:range rdf:resource="&computer_infrastructure;CPU"/>
+        <rdfs:domain rdf:resource="&computer_infrastructure;Computer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasPort -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;hasPort">
+        <rdfs:range rdf:resource="&computer_infrastructure;Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasRAM -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;hasRAM"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;isConnectedTo">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&computer_infrastructure;Computer"/>
+        <rdfs:range rdf:resource="&computer_infrastructure;Computer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/isLinkedBy -->
+
+    <owl:ObjectProperty rdf:about="&computer_infrastructure;isLinkedBy">
+        <rdfs:range rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:domain rdf:resource="&computer_infrastructure;Port"/>
+        <owl:inverseOf rdf:resource="&computer_infrastructure;connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasCoreNumber -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasCoreNumber"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasFrequency -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasFrequency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasManufacturer -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasManufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasModel -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasName -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasNumber -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasNumber">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasPortsNumber -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasPortsNumber"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;hasSpeed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/usesMACaddress -->
+
+    <owl:DatatypeProperty rdf:about="&computer_infrastructure;usesMACaddress">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/CAN -->
+
+    <owl:Class rdf:about="&computer_infrastructure;CAN">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;connects"/>
+                <owl:allValuesFrom rdf:resource="&computer_infrastructure;CANPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/CANPort -->
+
+    <owl:Class rdf:about="&computer_infrastructure;CANPort">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Port"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;EthernetPort"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;IPMIPort"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;SASPort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/CPU -->
+
+    <owl:Class rdf:about="&computer_infrastructure;CPU">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasCoreNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasFrequency"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&computer_infrastructure;datatypes/Hz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasModel"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasManufacturer"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Computer"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Link"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Port"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;RAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Computer -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Computer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasCPU"/>
+                <owl:onClass rdf:resource="&computer_infrastructure;CPU"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasRAM"/>
+                <owl:onClass rdf:resource="&computer_infrastructure;RAM"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasPort"/>
+                <owl:someValuesFrom rdf:resource="&computer_infrastructure;Port"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Link"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Port"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;RAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Controller -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Controller">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Desktop -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Desktop">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Ethernet -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Ethernet">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;connects"/>
+                <owl:allValuesFrom rdf:resource="&computer_infrastructure;EthernetPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/EthernetPort -->
+
+    <owl:Class rdf:about="&computer_infrastructure;EthernetPort">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Port"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;IPMIPort"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;SASPort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/IPMI -->
+
+    <owl:Class rdf:about="&computer_infrastructure;IPMI">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;connects"/>
+                <owl:allValuesFrom rdf:resource="&computer_infrastructure;IPMIPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/IPMIPort -->
+
+    <owl:Class rdf:about="&computer_infrastructure;IPMIPort">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Port"/>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;SASPort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Link -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Link">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;connects"/>
+                <owl:onClass rdf:resource="&computer_infrastructure;Port"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&computer_infrastructure;Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Port -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Port">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;usesMACaddress"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/RAM -->
+
+    <owl:Class rdf:about="&computer_infrastructure;RAM">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasFrequency"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&computer_infrastructure;datatypes/Hz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasModel"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasManufacturer"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/SAS -->
+
+    <owl:Class rdf:about="&computer_infrastructure;SAS">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;connects"/>
+                <owl:allValuesFrom rdf:resource="&computer_infrastructure;SASPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/SASPort -->
+
+    <owl:Class rdf:about="&computer_infrastructure;SASPort">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Server -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Server">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure;Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/Switch -->
+
+    <owl:Class rdf:about="&computer_infrastructure;Switch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasPortsNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure;hasPort"/>
+                <owl:someValuesFrom rdf:resource="&computer_infrastructure;EthernetPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

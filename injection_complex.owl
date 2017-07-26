@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY computer_infrastructure "http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mary/ontologies/2017/injection_complex#"
+     xml:base="http://www.semanticweb.org/mary/ontologies/2017/injection_complex"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:computer_infrastructure="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult0">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult1">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult2">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/pult3">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term0">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term1">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term2">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term3">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term4">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term5">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term6">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/desktops/term7">
+        <rdf:type rdf:resource="&computer_infrastructure;Desktop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/CANner0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/CANner0">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/CANner1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/CANner1">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/firewall0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/firewall0">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/firewall1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/firewall1">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw1">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth0"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth1"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/ipmi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1">
+        <rdf:type rdf:resource="&computer_infrastructure;Server"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth0"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth1"/>
+        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/ipmi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/eth0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/eth0"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/eth1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/eth1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/ipmi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/hw0/ipmi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth0">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/eth1">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/ipmi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra0/ports/ipmi">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth0">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/eth1">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/ipmi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/servers/infra1/ports/ipmi">
+        <rdf:type rdf:resource="&computer_infrastructure;Port"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/switches/controllers_network -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/switches/controllers_network">
+        <rdf:type rdf:resource="&computer_infrastructure;Switch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mary/ontologies/2017/injection_complex/switches/lab_network -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mary/ontologies/2017/injection_complex/switches/lab_network">
+        <rdf:type rdf:resource="&computer_infrastructure;Switch"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

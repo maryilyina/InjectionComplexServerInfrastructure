@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure" uri="computer_infrastructure.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1500971722746" name="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure" uri="computer_infrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1500971722746" name="http://www.semanticweb.org/mary/ontologies/2017/injection_complex" uri="injection_complex.owl"/>
+    </group>
+</catalog>
