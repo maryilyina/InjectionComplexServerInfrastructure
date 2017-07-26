@@ -35,21 +35,15 @@
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Gb -->
 
     <rdfs:Datatype rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Gb">
-        <rdfs:comment>Gb/s</rdfs:comment>
+        <rdfs:label>Gb/s</rdfs:label>
     </rdfs:Datatype>
-    
-
-
-    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Hz -->
-
-    <rdfs:Datatype rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Hz"/>
     
 
 
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Mb -->
 
     <rdfs:Datatype rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Mb">
-        <rdfs:comment>Mb/s</rdfs:comment>
+        <rdfs:label>Mb/s</rdfs:label>
     </rdfs:Datatype>
     
 
@@ -148,6 +142,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasMACaddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasMACaddress">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer"/>
@@ -185,14 +187,6 @@
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasSpeed -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasSpeed"/>
-    
-
-
-    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/usesMACaddress -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/usesMACaddress">
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -236,11 +230,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/CPU">
         <rdfs:label>Computer central processing unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasFrequency"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Hz"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -257,13 +252,6 @@
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Computer"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Link"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Port"/>
@@ -272,10 +260,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Component"/>
+    
+
+
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Computer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Computer">
         <rdfs:label>Component of computer network infrastructure - either server, user terminal or module of control system</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasRAM"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/RAM"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasCPU"/>
@@ -294,13 +295,6 @@
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasRAM"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/RAM"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Link"/>
@@ -393,18 +387,19 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Port">
         <rdfs:label>Belongs to computer or switch and is used for cable connections.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasMACaddress"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasNumber"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/usesMACaddress"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -415,23 +410,17 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/RAM">
         <rdfs:label>Computer data storage with random access</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasModel"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasFrequency"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/datatypes/Hz"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasModel"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/hasManufacturer"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
