@@ -6,7 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY injection_complex "http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/" >
+    <!ENTITY injection_complex "http://www.semanticweb.org/m-ilyina/ontologies/injection_complex#" >
     <!ENTITY computer_infrastructure "http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/" >
 ]>
 
@@ -330,7 +330,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link12">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
         <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/hw0/ports/eth0"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/12"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/12"/>
     </owl:NamedIndividual>
     
 
@@ -340,7 +340,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link13">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
         <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/hw1/ports/eth0"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/13"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/13"/>
     </owl:NamedIndividual>
     
 
@@ -349,8 +349,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link14">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/CANner0/ports/eth"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/14"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/CANner0/ports/eth"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/14"/>
     </owl:NamedIndividual>
     
 
@@ -359,8 +359,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link15">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/CANner1/ports/eth"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/15"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/CANner1/ports/eth"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/15"/>
     </owl:NamedIndividual>
     
 
@@ -369,8 +369,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link16">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra0/ports/eth0"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/16"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra0/ports/eth0"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/16"/>
     </owl:NamedIndividual>
     
 
@@ -379,8 +379,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link17">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra1/ports/eth0"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/17"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra1/ports/eth0"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/17"/>
     </owl:NamedIndividual>
     
 
@@ -389,8 +389,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link18">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/firewall0/ports/eth1"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/18"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/firewall0/ports/eth1"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/18"/>
     </owl:NamedIndividual>
     
 
@@ -399,8 +399,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link19">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/firewall1/ports/eth1"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/19"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/firewall1/ports/eth1"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/switches/lab_network/ports/19"/>
     </owl:NamedIndividual>
     
 
@@ -419,8 +419,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/links/_link20">
         <rdf:type rdf:resource="&computer_infrastructure;Ethernet"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra0/ports/eth1"/>
-        <computer_infrastructure:hasPort rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra1/ports/eth1"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra0/ports/eth1"/>
+        <computer_infrastructure:connects rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex/servers/infra1/ports/eth1"/>
     </owl:NamedIndividual>
     
 

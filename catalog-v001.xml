@@ -3,7 +3,7 @@
     <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure" uri="computer_infrastructure.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure" uri="computer_infrastructure.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1501082366639" name="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex" uri="injection_complex.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1501082366639" name="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure" uri="computer_infrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1501124197963" name="http://www.semanticweb.org/m-ilyina/ontologies/injection_complex" uri="injection_complex.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1501124197963" name="http://www.semanticweb.org/mary/ontologies/2017/computer_infrastructure" uri="computer_infrastructure.owl"/>
     </group>
 </catalog>
