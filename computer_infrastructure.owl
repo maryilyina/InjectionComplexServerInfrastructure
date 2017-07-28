@@ -197,6 +197,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure#ExtMemory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure#ExtMemory">
+        <rdfs:subClassOf rdf:resource="&computer_infrastructure2;Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure#SASStorage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure#SASStorage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure#ExtMemory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasPort"/>
+                <owl:someValuesFrom rdf:resource="&computer_infrastructure2;SASPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/m-ilyina/ontologies/computer_infrastructure/CAN -->
 
     <owl:Class rdf:about="&computer_infrastructure2;CAN">
@@ -228,7 +250,7 @@
         <rdfs:subClassOf rdf:resource="&computer_infrastructure2;Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasManufacturer"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasModel"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -242,7 +264,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasModel"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasManufacturer"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -267,9 +289,8 @@
         <rdfs:label>Component of computer network infrastructure - either server, user terminal or module of control system</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasName"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasPort"/>
+                <owl:someValuesFrom rdf:resource="&computer_infrastructure2;Port"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -281,15 +302,16 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasPort"/>
-                <owl:someValuesFrom rdf:resource="&computer_infrastructure2;Port"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasRAM"/>
+                <owl:onClass rdf:resource="&computer_infrastructure2;RAM"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasRAM"/>
-                <owl:onClass rdf:resource="&computer_infrastructure2;RAM"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&computer_infrastructure2;PhysicalLink"/>
@@ -351,15 +373,15 @@
         <rdfs:label>Physical connection between two ports that uses one of the protocol types</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasSpeed"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;connects"/>
+                <owl:onClass rdf:resource="&computer_infrastructure2;Port"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;connects"/>
-                <owl:onClass rdf:resource="&computer_infrastructure2;Port"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasSpeed"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&computer_infrastructure2;Port"/>
@@ -374,15 +396,15 @@
         <rdfs:subClassOf rdf:resource="&computer_infrastructure2;Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasSpeed"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasNumber"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasSpeed"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -396,14 +418,14 @@
         <rdfs:subClassOf rdf:resource="&computer_infrastructure2;Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasManufacturer"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasModel"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&computer_infrastructure2;hasModel"/>
+                <owl:onProperty rdf:resource="&computer_infrastructure2;hasManufacturer"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
